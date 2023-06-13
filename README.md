@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # mll-market
 
 ## Project setup
@@ -22,3 +23,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# MLL-MARKET
+>>>>>>> 5e33166a916cc92a26dc92924a2218b1cf38ec8b
