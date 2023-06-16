@@ -3,8 +3,9 @@ module.exports = defineConfig({
   transpileDependencies: true
 })
 
-// module.exports = {
-//   devServer: {
-//     overlay: false
-//   }
-// }
+
+  module.exports = {
+    chainWebpack: config => {
+        config.module.rules.delete('eslint');
+    }
+};

@@ -1,19 +1,26 @@
 <template>
-  <!-- <PageHeader/> 헤더 컴포넌트 -->
-  <!-- <router-view/>  페이지 이동이 표시될 곳 -->
-  <!-- <PageFooter/> 푸터 컴포넌트 -->
-  <HelloWorld/>
+  <div class="container">
+    <div class="navbar-brand">
+    <MainPageHeader/>
+    </div>
+    <div class="container body">
+    <router-vue/>
+  </div>
+    <MainPageFooter/>
+  </div> 
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainPageHeader from '@/components/main/MainPageHeader'
+import MainPageFooter from '@/components/main/MainPageFooter'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+export default{
+    name : 'App',
+    components : {
+      MainPageHeader,
+      MainPageFooter,
+    }
   }
-}
 </script>
 
 <style>
@@ -25,4 +32,21 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+/* #nav {
+  padding: 30px;
+}
+
+#test {
+  padding: 100px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+} */
 </style>
