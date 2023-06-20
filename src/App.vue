@@ -1,12 +1,14 @@
 <template>
-  <div class="container">
-    <div class="navbar-brand">
-    <MainPageHeader/>
+  <div class="container-fluid">
+    <div class="navbar-brand" style="height:200px;backgroundColor:#FFD89C">
+      <MainPageHeader/>
     </div>
-    <div class="container body">
-    <router-vue/>
-  </div>
-    <MainPageFooter/>
+    <div style="width: 100%; height:500px"> 
+      <router-view/>
+    </div>
+    <div style="height:150px;backgroundColor:#FFD89C">
+      <MainPageFooter/>
+    </div>
   </div> 
 </template>
 
@@ -32,6 +34,8 @@ export default{
   color: #2c3e50;
   margin-top: 60px;
 }
+
+
 
 /* #nav {
   padding: 30px;

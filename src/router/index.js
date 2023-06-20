@@ -13,31 +13,36 @@ export const router = new VueRouter({
       name : 'MainPageHome',
       component : MainPageHome
     },
-
+      //망링레소개
     {
       path: '/about/IntroMangLingLe',
       name: 'IntroMangLingLe',
-      component: () => import('@/components/about/IntroMangLingLe.vue')
-    }, //망링레소개
-
+      component: () => import('@/components/navbar/about/IntroMangLingLe.vue')
+    }, 
+      //물품
     {
       path: '/about/ShoppingAll',
       name: 'ShoppingAll',
-      component: () => import('@/components/about/ShoppingAll.vue')
-    }, //쇼핑리스트
-
+      component: () => import('@/components/navbar/about/ShoppingAll.vue')
+    }, 
+      // 로그인
     {
-      path: '/login/LoginMember',
+      path: '/topnavbar/login/LoginMember',
       name: 'LoginMember',
-      component: () => import('@/components/login/LoginMember.vue')
-    }, // 로그인
-
+      component: () => import('@/components/navbar/topnavbar/login/LoginMember.vue')
+    }, 
+      // 회원가입
     {
-      path: '/login/JoinMember',
+      path: '/topnavbar/join/JoinMember',
       name: 'JoinMember',
-      component: () => import('@/components/login/JoinMember.vue')
-    } // 회원가입
-
+      component: () => import('@/components/navbar/topnavbar/join/JoinMember.vue')
+    },
+      // 쇼핑카트
+    {
+      path: '/topnavbar/shoppingcart/ShoppingCartList',
+      name: 'ShoppingCartList',
+      component: () => import('@/components/navbar/topnavbar/shoppingcart/ShoppingCartList.vue')
+    },  
 
   ], 
 })

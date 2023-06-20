@@ -1,5 +1,5 @@
 <template>
- <div class="IntroMangLingLe">
+ <div>
     <h1>This is an introduce page</h1>
   </div>
 </template>
