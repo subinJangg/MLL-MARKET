@@ -1,11 +1,12 @@
 <template>
-  <div>
-    <header>
-      <ul class="nav justify-content-end bg-light" sytle="margin-top:20px">
+  <div id = "navbar">
+    <header style="backgroundColor:#FFD89C">
+      <ul class="nav justify-content-end bg-light">
         <!-- 로그인 화면 -->
         <li class="nav-item">
           <router-link 
             class="nav-link active"
+            :class="{ active: isActive('LoginMember') }"
             :to="{ name : 'LoginMember'}" 
           > LOGIN </router-link>
         </li>
@@ -28,13 +29,52 @@
       </ul>
 
       <!-- 메인 로고 -->
-      <div class="text-center">
+      <ul class="text-center">
+        <!-- 망고 -->
         <img 
-          src="@/assets/image/mainlogo.png"
+          src="@/assets/image/mango.png"
           class="logo-img"
-          style="height: 30%; width: 50%;"
+          style="height: 2.5%; width: 2.5%;"
         />
-      </div>
+        <!-- 링고 -->
+        <img 
+          src="@/assets/image/lingo.png"
+          class="logo-img"
+          style="height: 2.5%; width: 2.5%;"
+        />
+        <!-- 레고 -->
+        <img 
+          src="@/assets/image/lego.png"
+          class="logo-img"
+          style="height: 3%; width: 3%;"
+        />
+
+        <!-- 망링레마켓 로고 -->
+        <img 
+          src="@/assets/image/logo.png"
+          class="logo-img"
+          style="height: 40%; width: 40%; margin-top:9px; margin-bottom:-10px"
+        />
+
+        <!-- 망고 -->
+        <img 
+          src="@/assets/image/mango.png"
+          class="logo-img"
+          style="height: 2.5%; width: 2.5%;"
+        />
+        <!-- 링고 -->
+        <img 
+          src="@/assets/image/lingo.png"
+          class="logo-img"
+          style="height: 2.5%; width: 2.5%;"
+        />
+        <!-- 레고 -->
+        <img 
+          src="@/assets/image/lego.png"
+          class="logo-img"
+          style="height: 3%; width: 3%;"
+        />
+      </ul>
 
       <ul class="nav justify-content-center bg-light">
         <!-- 홈화면 -->
@@ -61,20 +101,45 @@
           > GOODS </router-link>
         </li> 
       </ul>
+      <hr style="height:1%;color:#FFD89C"/>
     </header>
   </div>
 </template>
   
 <script>
-export default{
-
+export default {
+  methods: {
+    isActive(name) {
+      return this.$route.name === name;
+    },
+  },
+  // ...
 }
 </script>
   
 <style scoped>
-/* .titleC{
-  hight:100px;
+
+/* a:link {
+  text-decoration:none; 
+  color: #EA906C;
 } */
- 
+
+/* a:visited {
+  text-decoration: underline;
+  color: #EA906C;
+
+} */
+
+/* a:hover {
+  text-decoration: none;
+  color: #EA906C;
+  background-color: #d6c39c;
+} */
+
+
+#navbar .nav-link.active {
+  background-color: #EA906C !important;
+}
+
 </style>
   
