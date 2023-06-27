@@ -3,16 +3,15 @@
     <header style="backgroundColor:#FFD89C">
       <ul class="nav justify-content-end bg-light">
         <!-- 로그인 화면 -->
-        <li class="nav-item">
+        <li class="nav-item cur">
           <router-link 
             class="nav-link active"
-            :class="{ active: isActive('LoginMember') }"
             :to="{ name : 'LoginMember'}" 
           > LOGIN </router-link>
         </li>
 
         <!-- 회원가입 화면 -->
-        <li class="nav-item">
+        <li class="nav-item cur">
           <router-link 
             class="nav-link active"
             :to="{ name : 'JoinMember'}" 
@@ -20,7 +19,7 @@
         </li>
 
         <!-- 쇼핑카트 -->
-        <li class="nav-item">
+        <li class="nav-item cur">
           <router-link 
             class="nav-link active"
             :to="{ name : 'ShoppingCartList'}" 
@@ -50,11 +49,14 @@
         />
 
         <!-- 망링레마켓 로고 -->
+        <router-link :to="{ name : 'ShoppingCartList'}" >
         <img 
           src="@/assets/image/logo.png"
           class="logo-img"
-          style="height: 40%; width: 40%; margin-top:9px; margin-bottom:-10px"
+          style="height: 40%; width: 40%; margin-top:9px; margin-bottom:-10px; 
+                 cursor:pointer; background-color: none;"
         />
+      </router-link>
 
         <!-- 망고 -->
         <img 
@@ -78,15 +80,16 @@
 
       <ul class="nav justify-content-center bg-light">
         <!-- 홈화면 -->
-        <li class="nav-item">
+        <li class="nav-item cur">
           <router-link 
             class="nav-link active"
             :to="{ name :'MainPageHome'}" 
           > HOME </router-link> 
+          
         </li>
         
         <!-- 망링레 소개 -->
-        <li class="nav-item">
+        <li class="nav-item cur">
           <router-link 
             class="nav-link active"
             :to="{ name : 'IntroMangLingLe'}"
@@ -94,7 +97,7 @@
         </li>
 
         <!-- 쇼핑리스트 -->
-        <li class="nav-item">
+        <li class="nav-item cur">
           <router-link 
             class="nav-link active"
             :to="{ name : 'ShoppingAll'}" 
@@ -108,10 +111,25 @@
   
 <script>
 export default {
+  name: 'MainPageHeader',
+  data() {
+    return {
+
+
+
+    };
+  },
+
   methods: {
-    isActive(name) {
-      return this.$route.name === name;
-    },
+
+    /* 망링레마켓 로고 클릭시 메인페이지로 이동 */ 
+
+
+
+
+    
+
+
   },
   // ...
 }
@@ -119,27 +137,24 @@ export default {
   
 <style scoped>
 
-/* a:link {
+.cur {
   text-decoration:none; 
   color: #EA906C;
-} */
+  cursor: pointer;
+} 
 
-/* a:visited {
-  text-decoration: underline;
+.cur:focus {
+  text-decoration: none;
   color: #EA906C;
-
-} */
+  background: transparent;
+  background-color: #d6c39c;
+}
 
 /* a:hover {
   text-decoration: none;
   color: #EA906C;
   background-color: #d6c39c;
-} */
-
-
-#navbar .nav-link.active {
-  background-color: #EA906C !important;
-}
+}*/
 
 </style>
   
