@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="navbar-brand" >
+    <div class="navbar-brand">
       <MainPageHeader/>
     </div>
     <div style="width: 100%; height:500px"> 
