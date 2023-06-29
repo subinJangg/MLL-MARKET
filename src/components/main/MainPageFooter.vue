@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="">
     <footer>
       <div class="row" style="padding-top:20px;">
       <!-- 전화번호 및 상호명 -->

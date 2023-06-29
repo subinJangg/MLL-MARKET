@@ -1,5 +1,5 @@
 <template>
-  <div id = "navbar">
+  <div class = "navbar">
     <header style="backgroundColor:#FFD89C">
       <ul class="nav justify-content-end bg-light">
         <!-- 로그인 화면 -->
@@ -49,7 +49,7 @@
         />
 
         <!-- 망링레마켓 로고 -->
-        <router-link :to="{ name : 'ShoppingCartList'}" >
+        <router-link :to="{ name : 'MainPageHome'}" >
         <img 
           src="@/assets/image/logo.png"
           class="logo-img"
