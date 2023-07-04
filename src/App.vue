@@ -3,7 +3,7 @@
     <div class="navbar-brand">
       <MainPageHeader/>
     </div>
-    <div style="width: 100%; height:450px"> 
+    <div style="min-height:450px"> 
       <router-view/>
     </div>
     <div style="height:150px;backgroundColor:#FFD89C">
@@ -40,7 +40,8 @@ export default{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  overflow: hidden;
+  /* margin-top: 60px; */
 }
 
 

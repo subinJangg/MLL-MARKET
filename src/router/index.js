@@ -2,23 +2,16 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 // 연결할 각 컴포넌트 import (src/views폴더 아래 컴포넌트들 생성해둠)
 
-
 import MainPageHome from "@/components/main/MainPageHome"
 import IntroMangLingLe from '@/components/navbar/about/IntroMangLingLe'
 import ShoppingAll from '@/components/navbar/about/ShoppingAll'
 import LoginMember from '@/components/navbar/topnavbar/login/LoginMember'
+import FindId from '@/components/navbar/topnavbar/login/FindId'
+import FindPass from '@/components/navbar/topnavbar/login/FindPass'
 import JoinMember from '@/components/navbar/topnavbar/join/JoinMember'
 import ShoppingCartList from '@/components/navbar/topnavbar/shoppingcart/ShoppingCartList'
 
-// import Vue from 'vue';
-// import VueRouter from 'vue-router';
-// import MainPageHome from "@/components/main/MainPageHome";
-//import testFile from "@/components/main/testFile";
 
-// Vue.use(VueRouter);
-
-// export const router = new VueRouter({
-//   mode: 'history',
   const routes = [
     { 
       path : '/', 
@@ -30,54 +23,51 @@ import ShoppingCartList from '@/components/navbar/topnavbar/shoppingcart/Shoppin
       path: '/about/IntroMangLingLe',
       name: 'IntroMangLingLe',
       component : IntroMangLingLe
-     // component: () => import('@/components/navbar/about/IntroMangLingLe.vue')
     }, 
+
       //물품
     {
       path: '/about/ShoppingAll',
       name: 'ShoppingAll',
       component : ShoppingAll
-     // component: () => import('@/components/navbar/about/ShoppingAll.vue')
     }, 
+
       // 로그인
     {
       path: '/topnavbar/login/LoginMember',
       name: 'LoginMember',
       component : LoginMember
-      //component: () => import('@/components/navbar/topnavbar/login/LoginMember.vue')
     }, 
+
+    // 아이디 찾기
+    {
+      path: '/topnavbar/login/FindId',
+      name: 'FindId',
+      component : FindId
+    }, 
+
+     // 비밀번호 찾기
+    {
+      path: '/topnavbar/login/FindPass',
+      name: 'FindPass',
+      component : FindPass
+    }, 
+
       // 회원가입
     {
       path: '/topnavbar/join/JoinMember',
       name: 'JoinMember',
       component : JoinMember
-     // component: () => import('@/components/navbar/topnavbar/join/JoinMember.vue')
     },
+
       // 쇼핑카트
     {
       path: '/topnavbar/shoppingcart/ShoppingCartList',
       name: 'ShoppingCartList',
       component : ShoppingCartList
-    //  component: () => import('@/components/navbar/topnavbar/shoppingcart/ShoppingCartList.vue')
     },  
 
   ]
-// })
-
-// export default router;
-
-
-
-// 라우터 설계
-// const routes = [
-//     { path: '/', component: MainPageHome },
-//     { path: '/about/IntroMangLingLe', component: IntroMangLingLe},
-//     { path: '/about/ShoppingAll', component: ShoppingAll },
-//     { path: '/login/LoginMember', component: LoginMember },
-//     { path: '/join/JoinMember', component: JoinMember },
-//     { path: '/shoppingcart/ShoppingCartList', component: ShoppingCartList },
-
-// ]
 
 // 라우터 생성
 const router = createRouter({
